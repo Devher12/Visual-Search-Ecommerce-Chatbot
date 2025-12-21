@@ -1,0 +1,17 @@
+# cloudbuild.yaml
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: [
+    'build',
+    '-t', '${_REGION}-docker.pkg.dev/${PROJECT_ID}/${_REPO_NAME}/${_IMAGE_NAME}:latest',
+    '-f', 'Dockerfile', # Points to the main Dockerfile
+    '.'
+  ]
+images:
+- '${_REGION}-docker.pkg.dev/${PROJECT_ID}/${_REPO_NAME}/${_IMAGE_NAME}:latest'
+options:
+  logging: CLOUD_LOGGING_ONLY
+substitutions:
+  _REPO_NAME: 'cloud-run-repo'
+  _IMAGE_NAME: 'visual-search-backend' # Changed image name for clarity
+  _REGION: 'asia-southeast1'

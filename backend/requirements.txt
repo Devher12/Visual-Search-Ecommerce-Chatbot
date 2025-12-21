@@ -1,0 +1,30 @@
+# Web Framework
+flask==3.0.0                    # Lightweight WSGI web framework for REST API
+flask-cors==4.0.0               # Cross-Origin Resource Sharing (CORS) support for Flask
+flask-jwt-extended==4.6.0       # JWT authentication and authorization for Flask
+
+# Image Processing
+Pillow==10.1.0                  # Python Imaging Library for image manipulation
+
+# Scientific Computing & Machine Learning
+numpy==1.26.4                   # Fundamental package for numerical computing (required by faiss and torch)
+torch==2.0.1                    # PyTorch deep learning framework for ResNet50 model
+torchvision==0.15.2             # Computer vision models and transforms (ResNet50, ImageNet preprocessing)
+                                 # Note: torch and torchvision versions must match for compatibility
+
+# Similarity Search
+faiss-cpu==1.7.4                # Facebook AI Similarity Search for efficient vector similarity search
+                                 # Note: Requires numpy. Use CPU version for deployment without GPU
+
+# Database
+pymongo==4.6.0                  # MongoDB Python driver for database operations
+
+# HTTP & Utilities
+requests==2.31.0                # HTTP library for downloading images (used in rebuild_faiss_index.py)
+python-dotenv==1.0.0            # Load environment variables from .env file
+
+# Production Server (optional, for deployment)
+gunicorn==21.2.0                # Production WSGI HTTP server for Unix
+
+# Note: werkzeug is included as a dependency of Flask and provides password hashing functions
+# (generate_password_hash, check_password_hash) used in authentication

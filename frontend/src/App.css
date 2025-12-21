@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Styles for a Professional Look */
+body {
+  font-family: 'Inter', sans-serif; /* Using Inter font for a clean, modern look */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensure consistent box model */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  background-color: #f8fafc; /* A very light background, though pages use gradients */
+  scroll-behavior: smooth; /* Smooth scrolling for navigation */
+}
+
+/* Custom Animations (if needed, otherwise Tailwind's built-in transitions are preferred) */
+/* Example: Fade-in animation for elements */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out forwards;
+}
+
+/* Example: Slide-up animation */
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.7s ease-out forwards;
+}
+
+/* Example: Pulse animation for text gradients */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Remove default React App styles that are no longer needed with Tailwind */
+/* .App, .App-logo, .App-header, .App-link, @keyframes App-logo-spin are removed */

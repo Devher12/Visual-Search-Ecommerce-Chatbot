@@ -1,0 +1,123 @@
+body, html,#root {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Full height for body and html */
+}
+.auth-container {
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f8f8; /* Fallback color */
+    position: relative; /* Needed to keep .background-image correctly positioned */
+    background-size: cover;
+    background-image: url('./rg.jpeg');
+}
+.auth-card {
+  animation: fade-in 0.5s ease-in-out;
+}
+.input-field {
+  background-color: white; /* Ensure clarity */
+  color: black; /* Input text color */
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+}
+h2 {
+  color: black; /* Ensure the title is visible against the background */
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.background-image {
+    background-image: url('./rg.jpeg'); /* Specify your image path */
+    background-size: cover; /* Adjust this to 'contain' if needed */
+    background-position: center; /* Center the image */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Places the background behind other content */
+}
+.content {
+    position: relative;
+    z-index: 1; /* Higher z-index to place it above the background */
+    color: white; /* Text color */
+    padding: 20px;
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .background-image {
+        background-size: contain; /* Change to contain on smaller screens */
+    }
+}
+/* In your index.css or App.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&family=Poppins:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar hide for older browsers/more control if tailwind-scrollbar-hide isn't enough */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+/* Apply the global background image to the body/html, removing it from component styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /* New global background for all pages */
+   
+}
+
+/* Specific styling for the HomePage's main content wrapper */
+
+.home-background-container {
+    min-height: 100vh; /* Ensures it stretches full viewport height */
+    width: 100%;
+     position: relative; /* Essential for z-index of children */
+    background-image: url('./ss.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+     z-index: 1; /* Ensure this is above the global background */
+}
+
+/* Animations (if you want these) */
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-up {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Apply animations to elements if desired, e.g., in HomePage.js: */
+/* <div className="relative z-10 animate-fade-in ..."> */
+/* <div className="w-full ... animate-slide-up"> */
+
+/* Custom scrollbar hide for older browsers/more control if tailwind-scrollbar-hide isn't enough */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
