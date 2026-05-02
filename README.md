@@ -1,4 +1,4 @@
-# 🎯 Visual Product Search AI
+#  Visual Search Ecommerce chatbot
 
 **A full-stack AI-powered visual search application that enables users to find products using image similarity search powered by deep learning and vector similarity algorithms.**
 
@@ -482,8 +482,8 @@ This script:
 
 ## 👤 Author
 
-**Muhammad Humza Majeed**  
-*Computer Science / Artificial Intelligence*
+**Muhammad Moeed Ikram**  
+*Computer Science *
 
 ---
 
